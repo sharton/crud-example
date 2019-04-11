@@ -1,0 +1,12 @@
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+
+    {% for quote in quote_list %}
+ <h1><a href="{% url 'quote_detail' pk=quote.pk %}">{{ quote.title }}</a></h1>
+       <p> {{ quote.authors }}</p>
+    {%  endfor %}

@@ -1,0 +1,17 @@
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+
+
+    <form role="form" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons submit='OK' reset="Cancel" %}{% endbuttons %}
+    </form>
+
+</body>
+</html>
